@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>వినాయక చవితి శుభాకాంక్షలు</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Telugu', sans-serif;
+            background: linear-gradient(145deg, #ff7e5f, #feb47b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #4E342E;
+        }
+
+        /* The clickable Laddu/Modak */
+        #modak-container {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        #modak-container:hover {
+            transform: scale(1.1);
+        }
+
+        #modak-image {
+            width: 300px;
+        }
+
+        #modak-container p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-top: 10px;
+        }
+
+        /* The main Wish Card */
+        #wish-card {
+            display: none; /* Initially hidden */
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff3e0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            border: 5px solid #ff9800;
+            animation: fadeInZoom 1s ease-out forwards;
+        }
+
+        /* Ganesha Image */
+        #ganesha-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid #e65100;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Card Text styles */
+        #wish-card h1 {
+            color: #bf360c;
+            font-size: 2.2em;
+            margin: 0;
+        }
+
+        #wish-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .sender-name {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #d84315;
+            margin-top: 15px;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="modak-container">
+        <img id="modak-image" src="https://i.ytimg.com/vi/baK3cp1qq2U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5Y-RP8RvJOStNDnGT0H-QHQKbZw" alt="Laddu">
+        <p>ఈ ప్రసాదంపై నొక్కండి!</p>
+    </div>
+
+    <div id="wish-card">
+        <img id="ganesha-image" src="https://i.pinimg.com/originals/a1/f9/6d/a1f96dea542c7f30066fe0d1920d194c.jpg" alt="Lord Ganesha">
+        <h1>వినాయక చవితి శుభాకాంక్షలు</h1>
+        <p>ఆ గణనాధుని ఆశీస్సులతో మీ జీవితంలోని అడ్డంకులన్నీ తొలగిపోయి, ప్రతి కార్యం విజయవంతం కావాలని మనస్ఫూర్తిగా కోరుకుంటున్నాను.</p>
+        <p class="sender-name">- మీ తేజ </p>
+    </div>
+
+    <script>
+        // Get the elements
+        const modakContainer = document.getElementById('modak-container');
+        const wishCard = document.getElementById('wish-card');
+
+        // Add a click event listener to the modak
+        modakContainer.addEventListener('click', () => {
+            // Hide the modak
+            modakContainer.style.display = 'none';
+            
+            // Show the wish card
+            wishCard.style.display = 'flex';
+        });
+    </script>
+
+</body>
+</html>
